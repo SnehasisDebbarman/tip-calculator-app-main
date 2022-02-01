@@ -1,6 +1,7 @@
 body{
     background-color:hsl(185, 41%, 84%);
     font-family: 'Space Mono', monospace;
+    font-weight: 700;
     
 }
 input{
@@ -11,9 +12,11 @@ input{
     border:0;
     border-radius: 0.2rem;
     color: hsl(183, 100%, 15%);
-    direction: rtl;
+    direction: ltr;
+    text-align: right;
     font-family: 'Space Mono', monospace;
-    caret-color: transparent;
+   
+    /* caret-color: transparent; */
 }
 input:focus, textarea:focus, select:focus{
     outline: none;
@@ -38,12 +41,16 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 .input-group{
+    margin-top: 10px;
     background-color: hsl(185, 41%, 84%);
     border-radius: 5px;
 }
 .input-group:hover{
     outline: #3D6666;
     box-shadow: 0 0 0 3px hsl(172, 67%, 45%);
+}
+#ig{
+    box-shadow: 0 0 0 3px red;
 }
 .dollar {
     padding-left: 30px;
@@ -76,12 +83,13 @@ input[type=number] {
 }
 .grid-item{
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     color: hsl(184, 14%, 56%);
 }
 .grid-item:nth-child(2){
-    background-color: #3D6666;
+    background-color: hsl(183, 100%, 15%);
     color: white;
+    padding: 2rem;
 }
 .reset{
     width: 100%;
@@ -95,9 +103,11 @@ input[type=number] {
     display: grid;
     grid-template-columns: 33% 33% 33% ;
     gap: 5px;
+    margin-top: 10px;
 }
 .btn-grid-item{
     padding: 5px;
+    color: white;
     background-color: hsl(183, 100%, 15%);
     text-align: center;
     border-radius: 5px;
@@ -116,6 +126,94 @@ input[type=number] {
 .tip-persent{
     width: 94%;
     height: 24px;
+}
+
+.cal-grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+.cal-grid-item{
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.money{
+    gap: 5px;
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+    text-align: right;
+    font-weight: 500;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.reset-container{
+    height:100%;
+    display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    color: hsl(183, 100%, 15%);
+}
+.error-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#error{
+   
+    align-self: end;
+    text-align: right;
+    color: red;
+}
+.item1 {
+    grid-column: 1 / span 2;
+  }
+@media screen and (max-width:400px){
+    span>input{
+        width: 80% ;
+        
+    }
+}
+@media screen and (max-width:540px){
+    body{
+        font-size: 12px;
+    }
+    .custom-card{
+        grid-template-columns: 100%;
+        width: 90%;
+    }
+    .grid-item{
+        padding: 0.5rem;
+    }
+    .money{
+        font-size: 1.7rem;
+    }
+    .reset-container{
+        height: 30%;
+    }
+}
+@media screen and (min-width:541px) and (max-width:880px){
+    .custom-card{
+        width: 85%;
+    }
+    .grid-item{
+        padding: 0.5rem;
+    }
+    .reset-container{
+        height:80%;
+    }
+    
 }
 /* 
 - Very dark cyan: hsl(183, 100%, 15%)

@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="./script.js" defer></script>
     <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -31,6 +32,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        padding: 20px;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -50,46 +52,83 @@
             <span>
               <img src="./images/icon-dollar.svg" alt="" />
 
-              <input type="number" />
+              <input
+                id="bill-amount"
+                type="number"
+                value="0"
+                onkeyup="calculate()"
+              />
             </span>
           </div>
           <br />
           <div>Select Tip %</div>
           <div class="btn-grid">
-            <div class="btn-grid-item">5%</div>
-            <div class="btn-grid-item">10%</div>
-            <div class="btn-grid-item">15%</div>
-            <div class="btn-grid-item">20%</div>
-            <div class="btn-grid-item">50%</div>
+            <div class="btn-grid-item" onclick="tipValue(5)">5%</div>
+            <div class="btn-grid-item" onclick="tipValue(10)">10%</div>
+            <div class="btn-grid-item" onclick="tipValue(15)">15%</div>
+            <div class="btn-grid-item" onclick="tipValue(20)">20%</div>
+            <div class="btn-grid-item" onclick="tipValue(50)">50%</div>
             <div class="btn-grid-item">
-              <input class="tip-persent" type="number" placeholder="Custom" />
+              <input
+                class="tip-persent"
+                id="custom-tip"
+                type="number"
+                placeholder="Custom"
+                onkeyup="calculate()"
+              />
             </div>
           </div>
           <br />
-          <div>Number of People</div>
-          <div class="input-group">
+          <div class="error-container">
+            <div>Number of People</div>
+            <div id="error">Can't be Zero</div>
+          </div>
+
+          <div class="input-group" id="ig">
             <span>
               <img src="./images/icon-person.svg" alt="" />
 
-              <input type="number" value="0" />
+              <input
+                id="person-count"
+                type="number"
+                value="0"
+                onkeyup="calculate()"
+              />
             </span>
           </div>
         </div>
         <div class="grid-item">
-          <div>Tip Amount /person</div>
-          <div>person Total / person</div>
-          <div>
-            <div class="reset" type="reset">RESET</div>
+          <div class="cal-grid-container">
+            <div class="cal-grid-item">
+              Tip Amount
+              <br />
+              <div style="color: hsl(184, 14%, 56%)">/person</div>
+            </div>
+            <div class="cal-grid-item">
+              <div id="perhead" class="money"></div>
+            </div>
+            <div class="cal-grid-item">
+              Total <br />
+              <div style="color: hsl(184, 14%, 56%)">/person</div>
+            </div>
+            <div class="cal-grid-item">
+              <div id="total" class="money"></div>
+            </div>
+          </div>
+
+          <div class="reset-container">
+            <div class="reset" type="reset" onclick="reset()">RESET</div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Snehasis Debbarman</a>.
+      <div class="attribution">
+        <div>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Snehasis Debbarman</a>.
+        </div>
+      </div>
     </div>
   </body>
 </html>
