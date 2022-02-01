@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head role="heading">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -39,99 +39,103 @@
       }
     </style>
   </head>
-  <body role="main">
-    <div class="containers">
-      <div class="logo">
-        <img src="./images/logo.svg" alt="" />
-      </div>
+  <body>
+    <main role="main">
+      <div class="containers">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </div>
 
-      <div class="custom-card">
-        <div class="grid-item">
-          <label>Bill</label>
-          <div class="input-group">
-            <span>
-              <img src="./images/icon-dollar.svg" alt="" />
+        <div class="custom-card">
+          <div class="grid-item">
+            <label>Bill</label>
+            <div class="input-group">
+              <span>
+                <img src="./images/icon-dollar.svg" alt="" />
 
-              <input
-                aria-label="Bill Amount"
-                id="bill-amount"
-                type="number"
-                value="0"
-                onkeyup="calculate()"
-              />
-            </span>
-          </div>
-          <br />
-          <label>Select Tip %</label>
-          <div class="btn-grid">
-            <div class="btn-grid-item" onclick="tipValue(5)">5%</div>
-            <div class="btn-grid-item" onclick="tipValue(10)">10%</div>
-            <div class="btn-grid-item" onclick="tipValue(15)">15%</div>
-            <div class="btn-grid-item" onclick="tipValue(20)">20%</div>
-            <div class="btn-grid-item" onclick="tipValue(50)">50%</div>
-            <div class="btn-grid-item">
-              <input
-                aria-label="Select Tip"
-                class="tip-persent"
-                id="custom-tip"
-                type="number"
-                placeholder="Custom"
-                onkeyup="calculate()"
-              />
+                <input
+                  aria-label="Bill Amount"
+                  id="bill-amount"
+                  type="number"
+                  value="0"
+                  onkeyup="calculate()"
+                />
+              </span>
+            </div>
+            <br />
+            <label>Select Tip %</label>
+            <div class="btn-grid">
+              <div class="btn-grid-item" onclick="tipValue(5)">5%</div>
+              <div class="btn-grid-item" onclick="tipValue(10)">10%</div>
+              <div class="btn-grid-item" onclick="tipValue(15)">15%</div>
+              <div class="btn-grid-item" onclick="tipValue(20)">20%</div>
+              <div class="btn-grid-item" onclick="tipValue(50)">50%</div>
+              <div class="btn-grid-item">
+                <input
+                  aria-label="Select Tip"
+                  class="tip-persent"
+                  id="custom-tip"
+                  type="number"
+                  placeholder="Custom"
+                  onkeyup="calculate()"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="error-container">
+              <label>Number of People</label>
+              <div id="error">Can't be Zero</div>
+            </div>
+
+            <div class="input-group" id="ig">
+              <span>
+                <img src="./images/icon-person.svg" alt="" />
+
+                <input
+                  aria-label="person Count"
+                  id="person-count"
+                  type="number"
+                  value="0"
+                  onkeyup="calculate()"
+                />
+              </span>
             </div>
           </div>
-          <br />
-          <div class="error-container">
-            <label>Number of People</label>
-            <div id="error">Can't be Zero</div>
-          </div>
+          <div class="grid-item">
+            <div class="cal-grid-container">
+              <div class="cal-grid-item">
+                Tip Amount
+                <br />
+                <div style="color: hsl(184, 14%, 56%)">/person</div>
+              </div>
+              <div class="cal-grid-item">
+                <div id="perhead" class="money"></div>
+              </div>
+              <div class="cal-grid-item">
+                Total <br />
+                <div style="color: hsl(184, 14%, 56%)">/person</div>
+              </div>
+              <div class="cal-grid-item">
+                <div id="total" class="money"></div>
+              </div>
+            </div>
 
-          <div class="input-group" id="ig">
-            <span>
-              <img src="./images/icon-person.svg" alt="" />
-
-              <input
-                aria-label="person Count"
-                id="person-count"
-                type="number"
-                value="0"
-                onkeyup="calculate()"
-              />
-            </span>
+            <div class="reset-container">
+              <div class="reset" onclick="reset()">RESET</div>
+            </div>
           </div>
         </div>
-        <div class="grid-item">
-          <div class="cal-grid-container">
-            <div class="cal-grid-item">
-              Tip Amount
-              <br />
-              <div style="color: hsl(184, 14%, 56%)">/person</div>
-            </div>
-            <div class="cal-grid-item">
-              <div id="perhead" class="money"></div>
-            </div>
-            <div class="cal-grid-item">
-              Total <br />
-              <div style="color: hsl(184, 14%, 56%)">/person</div>
-            </div>
-            <div class="cal-grid-item">
-              <div id="total" class="money"></div>
-            </div>
-          </div>
-
-          <div class="reset-container">
-            <div class="reset" onclick="reset()">RESET</div>
+        <div class="attribution">
+          <div>
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by <a href="#">Snehasis Debbarman</a>.
           </div>
         </div>
       </div>
-      <div class="attribution">
-        <div>
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Snehasis Debbarman</a>.
-        </div>
-      </div>
-    </div>
+    </main>
   </body>
 </html>
