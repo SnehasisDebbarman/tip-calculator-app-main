@@ -189,6 +189,9 @@ input[type=number] {
     body{
         font-size: 12px;
     }
+    .logo{
+        margin-top: 0rem;
+    }
     .custom-card{
         grid-template-columns: 100%;
         width: 90%;

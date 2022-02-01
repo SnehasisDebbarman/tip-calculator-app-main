@@ -72,6 +72,7 @@ function reset() {
   document.getElementById("perhead").innerText = "$" + 0;
   document.getElementById("total").innerText = "$" + 0;
   document.getElementById("bill-amount").value = 0;
+  start();
 }
 
 var error = document.getElementById("error");
