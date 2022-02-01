@@ -1,0 +1,126 @@
+body{
+    background-color:hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    
+}
+input{
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    background-color: hsl(185, 41%, 84%);
+    border:0;
+    border-radius: 0.2rem;
+    color: hsl(183, 100%, 15%);
+    direction: rtl;
+    font-family: 'Space Mono', monospace;
+    caret-color: transparent;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+span>img{
+    padding-left: 10px;
+}
+span>input{
+    width: 85% ;
+    
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.input-group{
+    background-color: hsl(185, 41%, 84%);
+    border-radius: 5px;
+}
+.input-group:hover{
+    outline: #3D6666;
+    box-shadow: 0 0 0 3px hsl(172, 67%, 45%);
+}
+.dollar {
+    padding-left: 30px;
+    background: url("./images/icon-dollar.svg") no-repeat left;
+    background-size: 10px;
+    background-color: hsl(185, 41%, 84%);
+  }
+.containers{
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    margin-top: 3rem;
+    padding:3rem;
+}
+.custom-card{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    width: 60%;
+    padding: 2rem;
+    height: auto;
+    background-color: white;
+    border-radius: 2rem;
+    font-family: 'Space Mono', monospace;
+
+}
+.grid-item{
+    border-radius: 1rem;
+    padding: 1rem;
+    color: hsl(184, 14%, 56%);
+}
+.grid-item:nth-child(2){
+    background-color: #3D6666;
+    color: white;
+}
+.reset{
+    width: 100%;
+    font-size: 20px;
+    bottom: 0;
+    background-color:hsl(172, 67%, 45%);
+    box-shadow: none;
+    text-align: center;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    gap: 5px;
+}
+.btn-grid-item{
+    padding: 5px;
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    border-radius: 5px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.btn-grid-item:hover{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+.btn-grid-item:nth-child(6){
+    background-color: hsl(185, 41%, 84%);
+}
+.tip-persent{
+    width: 94%;
+    height: 24px;
+}
+/* 
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%) */

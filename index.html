@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    /> -->
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containers">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+
+      <div class="custom-card">
+        <div class="grid-item">
+          <div>Bill</div>
+          <div class="input-group">
+            <span>
+              <img src="./images/icon-dollar.svg" alt="" />
+
+              <input type="number" />
+            </span>
+          </div>
+          <br />
+          <div>Select Tip %</div>
+          <div class="btn-grid">
+            <div class="btn-grid-item">5%</div>
+            <div class="btn-grid-item">10%</div>
+            <div class="btn-grid-item">15%</div>
+            <div class="btn-grid-item">20%</div>
+            <div class="btn-grid-item">50%</div>
+            <div class="btn-grid-item">
+              <input class="tip-persent" type="number" placeholder="Custom" />
+            </div>
+          </div>
+          <br />
+          <div>Number of People</div>
+          <div class="input-group">
+            <span>
+              <img src="./images/icon-person.svg" alt="" />
+
+              <input type="number" value="0" />
+            </span>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div>Tip Amount /person</div>
+          <div>person Total / person</div>
+          <div>
+            <div class="reset" type="reset">RESET</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Snehasis Debbarman</a>.
+    </div>
+  </body>
+</html>
